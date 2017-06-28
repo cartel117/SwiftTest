@@ -9,7 +9,13 @@
 import XCTest
 @testable import SwiftTest
 
+
 class SwiftTestTests: XCTestCase {
+    
+    var vc: ViewController! = ViewController()
+//    vc = ViewController()
+    var test : String? = nil
+//    test = "123"
     
     override func setUp() {
         super.setUp()
@@ -20,17 +26,22 @@ class SwiftTestTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+   
+    func testaddadawd() {
+        let test = vc.addadawd(1,  SecondNum: 2)
+        XCTAssertTrue(3 == test)
+//        XCTAssertEqual(3, test)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testhalfOpenRangeLength(){
+        let test = vc.halfOpenRangeLength(6, end: 2)
+        XCTAssertTrue(-4 == test)
+    }
+    
+    func testsayHello() {
+        let test = vc.sayHello("Tim")
+        XCTAssertNotNil(test);
+//        XCTAssertEqual(<#T##expression1: [T : U]##[T : U]#>, <#T##expression2: [T : U]##[T : U]#>)
     }
     
 }
